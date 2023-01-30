@@ -120,7 +120,7 @@ How are you
 ```
 The same methods are called as before, and the text is set to `text.concat("\n" + parameters[1])`. The processing is done in the same way as Hello, but instead now its How are you. The spaces are not an issue as they are whitespace characters which can be added to a string.
 
-#Part 2
+# Part 2
 ### For the bug in the reversed method in the ArrayExamples.java file
 #### Failure-inducing input
 ```
