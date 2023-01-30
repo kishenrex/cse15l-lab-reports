@@ -100,6 +100,20 @@ public class server {
 }
 
 ```
+# Server setup
+First, the server is setup using `javac StringServer.java` and `java StringServer 4000`. Note any number between 1024 to 49151 can be used for as the port number. Now, the server will be running at this [link](http://localhost:4000) using the local host. This causes the "main" method in StringServer.java to be called, which calls the "start" method in server.java, passing in the port number and handler as arguments. It then creates a HttpServer object with the port number, to create the server.
 
-# Screenshot 1
+
+# Hello Screenshot
 ![Hello Screenshot](assets/lab_report_2_ss1.png)
+After typing in `/add-message?s=Hello` into the searchbar, the page shows `Hello`. I think that when the address is searched for, the handle method in the server.java file calls the handleRequest method in StringServer.java, passing in the url. This creates the "text" string. When `/add-message?s=Hello` is entered, the text is set to `text.concat("\n" + parameters[1])`, where paramaters is a String array, and the element at the first index are the characters after the "=". The `\n` represents the new line character, so a new line is created after each phrase.
+
+
+# How are you Screenshot
+![How are you Screenshot](assets/lab_report_2_ss2.png)
+After typing in `/add-message?s=How are you` into the searchbar, the page shows:
+```
+Hello
+How are you
+```
+The same methods are called as before, and the text is set to `text.concat("\n" + parameters[1])`. The processing is done in the same way as Hello, but instead now its How are you. The spaces are not an issue as they are whitespace characters which can be added to a string.
