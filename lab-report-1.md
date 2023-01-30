@@ -20,5 +20,7 @@ Then, I typed "yes" to continue connecting. Note that this should only happen on
 ![Remote Connection screenshot 3](assets/cse15l-lab_report1_ss3.png)
 When I successfuly connected remotely, the cluster status was displayed. Also, I was now able to pass in commands.
 
+# Trying some commands
+
 ![Trying commands screenshot](assets/cse15l-lab_report1_ss4.png)
 Now I tried using various commands, including the `ls` and `ls -lat` command. `ls` is used to list non-hidden files in the current directory, while `ls -lat` is used to list hidden files as well. Note that I cannot list other users files using the `ls` command. To close the connection, I can use the `exit` command, which is is used to close the current shell. The `cp` command is used to copy files or directories.
