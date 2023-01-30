@@ -104,12 +104,14 @@ public class server {
 First, the server is setup using `javac StringServer.java` and `java StringServer 4000`. Note any number between 1024 to 49151 can be used for as the port number. Now, the server will be running at this [link](http://localhost:4000) using the local host. This causes the "main" method in StringServer.java to be called, which calls the "start" method in server.java, passing in the port number and handler as arguments. It then creates a HttpServer object with the port number, to create the server.
 
 
-# Hello Screenshot
+## Hello Screenshot
 ![Hello Screenshot](assets/lab_report_2_ss1.png)
-After typing in `/add-message?s=Hello` into the searchbar, the page shows `Hello`. I think that when the address is searched for, the handle method in the server.java file calls the handleRequest method in StringServer.java, passing in the url. This creates the "text" string. When `/add-message?s=Hello` is entered, the text is set to `text.concat("\n" + parameters[1])`, where paramaters is a String array, and the element at the first index are the characters after the "=". The `\n` represents the new line character, so a new line is created after each phrase.
+After typing in `/add-message?s=Hello` into the searchbar, the page shows:
+```Hello```
+I think that when the address is searched for, the handle method in the server.java file calls the handleRequest method in StringServer.java, passing in the url. This creates the "text" string. When `/add-message?s=Hello` is entered, the text is set to `text.concat("\n" + parameters[1])`, where paramaters is a String array, and the element at the first index are the characters after the "=". The `\n` represents the new line character, so a new line is created after each phrase.
 
 
-# How are you Screenshot
+## How are you Screenshot
 ![How are you Screenshot](assets/lab_report_2_ss2.png)
 After typing in `/add-message?s=How are you` into the searchbar, the page shows:
 ```
@@ -117,3 +119,56 @@ Hello
 How are you
 ```
 The same methods are called as before, and the text is set to `text.concat("\n" + parameters[1])`. The processing is done in the same way as Hello, but instead now its How are you. The spaces are not an issue as they are whitespace characters which can be added to a string.
+
+#Part 2
+### For the bug in the reversed method in the ArrayExamples.java file
+#### Failure-inducing input
+```
+@Test
+public void testReversed() {
+    int[] input1 = {1, 2, 3, 4};
+    assertArrayEquals(new int[]{4, 3, 2, 1}, ArrayExamples.reversed(input1));
+}
+```
+
+#### Non-failure inducing input
+```
+@Test
+public void testReversed() {
+    int[] input1 = {0, 0, 0, 0};
+    assertArrayEquals(new int[]{0, 0, 0, 0}, ArrayExamples.reversed(input1));
+}
+```
+
+#### Symptom
+##### Failed:
+![Failed Input Screenshot 1](assets/lab_report_2_ss3.png)
+
+##### Non-Failed:
+![Non-failed Input Screenshot 1](assets/lab_report_2_ss4.png)
+
+#### Bug: Before
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = newArray[arr.length - i - 1];
+    }
+    return arr;
+  }
+```
+#### Bug: After
+```
+static int[] reversed(int[] arr) {
+    int[] newArray = new int[arr.length];
+    for(int i = 0; i < arr.length; i += 1) {
+      newArray[i] = arr[arr.length - i - 1];
+    }
+    return newArray;
+  }
+```
+#### Description of Fix
+The fix assigns `newArray[i]` to be assigned to `arr[arr.length - i - 1]` instead of `arr[i]`, which stops data from being incorrectly overwritten by its reverse. Additionally, newArray is returned instead of arr, as newArray is the correct array with the reversed contents.
+
+
+
