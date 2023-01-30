@@ -107,7 +107,10 @@ First, the server is setup using `javac StringServer.java` and `java StringServe
 ## Hello Screenshot
 ![Hello Screenshot](assets/lab_report_2_ss1.png)
 After typing in `/add-message?s=Hello` into the searchbar, the page shows:
-```Hello```
+```
+Hello
+```
+
 I think that when the address is searched for, the handle method in the server.java file calls the handleRequest method in StringServer.java, passing in the url. This creates the "text" string. When `/add-message?s=Hello` is entered, the text is set to `text.concat("\n" + parameters[1])`, where paramaters is a String array, and the element at the first index are the characters after the "=". The `\n` represents the new line character, so a new line is created after each phrase.
 
 
