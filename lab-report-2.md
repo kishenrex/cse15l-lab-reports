@@ -170,5 +170,8 @@ static int[] reversed(int[] arr) {
 #### Description of Fix
 The fix assigns `newArray[i]` to be assigned to `arr[arr.length - i - 1]` instead of `arr[i]`, which stops data from being incorrectly overwritten by its reverse. Additionally, newArray is returned instead of arr, as newArray is the correct array with the reversed contents.
 
+# Part 3
+I learned how to write and understand JUnit tests properly, as prior to this we were just introduced to them in CSE12, but I didn't have as good of an understanding about how it all worked until now. Also, I learned about hosting web servers using java and how we can process user input through the search bar, using the urls.
+
 
 
