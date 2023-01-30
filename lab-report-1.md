@@ -6,7 +6,7 @@ I already had VS Code installed as I took CSE11 last quarter, so I could skip th
 # Remotely Connecting 
 ![Remote Connection screenshot 1](assets/cse15l-lab_report1_ss2.png)
 
-First I downloaded Git for Windows from this [site] (https://gitforwindows.org/), selecting VS Code as my default text editor. Then I opened a terminal in VS Code and followed the steps on [this website] (https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal/50527994#50527994) to use a git bash terminal in VScode. To summarize the website, I needed to open the terminal, open the command palette, type 'select default profile', then press the plus icon and open a git bash terminal. After that, I opened a terminal and inputted the following command:
+First I downloaded Git for Windows from this [site](https://gitforwindows.org/), selecting VS Code as my default text editor. Then I opened a terminal in VS Code and followed the steps on [this website](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal/50527994#50527994) to use a git bash terminal in VScode. To summarize the website, I needed to open the terminal, open the command palette, type 'select default profile', then press the plus icon and open a git bash terminal. After that, I opened a terminal and inputted the following command:
 ```
 $ ssh cs15lwi23ask@ieng6.ucsd.edu
 ```
