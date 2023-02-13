@@ -1,7 +1,7 @@
 # Grep
 
 ## Option 1: -c
-[Source link -c] (https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+[Source link -c](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 This option causes the output to be a count of the lines that match a pattern, instead of the filename and lines containing the string
 
 ### Example 1:
@@ -36,7 +36,7 @@ in a text file a certain string appears.
 
 
 ## Option 2: -r:
-[source link -r] (https://linuxhandbook.com/grep-search-all-files-directories/)
+[source link -r](https://linuxhandbook.com/grep-search-all-files-directories/)
 This option will cause the command to search in all the files and subdirectories of the current directory, recursively.
 
 ### Example 3:
@@ -127,7 +127,7 @@ written_2/travel_guides/berlitz1/WhereToFrance.txt:        Saint-Wandrille, Le B
 In example 4, perform a search for the string "Hello" in all files and subdirectories from the current directory (docsearch/). This results in each filename outputted alongside the line containing the string. This could be useful if you don't want to specify a specific subdirectory to perform a search for a given string, and want to search in all subdirectories.
 
 ## Option 3: -h
-[Source link -h] (https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+[Source link -h](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 This command will cause the output to display the matching lines without the filenames.
 
 ### Example 5:
@@ -284,7 +284,7 @@ In example 6, we search for the string "Malaysia" in the WhatToMalaysia.txt and 
 
 
 ## Option 4: -A n
-[Source link -A n] (https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+[Source link -A n](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 This command will print the searched line and n lines after the result.
 
 ### Example 7:
